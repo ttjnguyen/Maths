@@ -1,5 +1,5 @@
 //
-//  AdditionQuestion.h
+//  DivisionQuestion.h
 //  Maths
 //
 //  Created by Jenny Nguyen on 2016-11-02.
@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AdditionQuestion : Question
+@interface DivisionQuestion : Question
+
+
 
 
 @end

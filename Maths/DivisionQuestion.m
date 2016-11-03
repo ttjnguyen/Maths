@@ -1,14 +1,14 @@
 //
-//  AdditionQuestion.m
+//  DivisionQuestion.m
 //  Maths
 //
 //  Created by Jenny Nguyen on 2016-11-02.
 //  Copyright © 2016 LightHouseLabs. All rights reserved.
 //
 
-#import "AdditionQuestion.h"
+#import "DivisionQuestion.h"
 
-@implementation AdditionQuestion
+@implementation DivisionQuestion
 
 - (instancetype)init {
     if (self) {

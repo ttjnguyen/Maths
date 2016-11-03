@@ -1,14 +1,14 @@
 //
-//  AdditionQuestion.m
+//  MultiplicationQuestion.m
 //  Maths
 //
 //  Created by Jenny Nguyen on 2016-11-02.
 //  Copyright © 2016 LightHouseLabs. All rights reserved.
 //
 
-#import "AdditionQuestion.h"
+#import "MultiplicationQuestion.h"
 
-@implementation AdditionQuestion
+@implementation MultiplicationQuestion
 
 - (instancetype)init {
     if (self) {
@@ -19,6 +19,5 @@
 
 - (void)generateQuestion {
 }
-
 
 @end

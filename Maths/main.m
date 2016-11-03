@@ -10,9 +10,43 @@
 #import "AdditionQuestion.h"
 #import "ScoreKeeper.h"
 #import "InputHandler.h"
+#import "QuestionManager.h"
+#import "QuestionFactory.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
+        
+        
+        QuestionManager *questionsManager = [[QuestionManager alloc]init];
+        QuestionFactory *questionFactory = [[QuestionFactory alloc]init];
+
+        Question *question = [[Question alloc]init];
+        [QuestionManager.questions addObject:AdditionQuestion];
+        
+        
+                BOOL gameOn = YES;
+                NSLog(@"MATHS!\n\n\n");
+                NSString *right = @"Right!\n";
+                NSString *wrong = @"Wrong!\n";
+                ScoreKeeper *scoreKeeper = [[ScoreKeeper alloc] init];
+                InputHandler *inputHandler = [[InputHandler alloc] init];
+        
+        NSArray *questionSubclassNames =
+        @[@"AdditionQuestion", @"SubtractionQuestion",@"MultiplcationQuestion", @"DivisionQuestion"];
+        
+        [[NSClassFromString(className) alloc]init];
+
+                while (gameOn) {
+
+                    Question *randomQuestion = [questionFactory questionSelector];
+                    [questionsManager addEquationtoMutArray:randomQuestion];
+                    
+                    
+                    
+                    
+                    
+                    
+                    
         
         char answer[255];
         
@@ -21,15 +55,15 @@ int main(int argc, const char * argv[]) {
         
         while (YES) {
             
-            AdditionQuestion *question = [[AdditionQuestion alloc]init];
+            Question *question = [[Question alloc]init];
             
             NSLog(@"%@", question.aQuestion);
             
             InputHandler *userInput = [[InputHandler alloc]init];
             
             NSString *answerString = [userInput parsedInput];
-                        
             
+                       
             
             if ([answerString isEqualToString:@"quit"]) {
                 NSLog(@"You got %d correct, and %d wrong,", yourScore.correct, yourScore.wrong);
@@ -57,4 +91,5 @@ int main(int argc, const char * argv[]) {
         
     }
     return 0;
+    }
 }
